@@ -1,31 +1,39 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman Game
+* Hangman game is a python terninal game,which runs in the Code Institue terminal on Heroku
 
-Welcome maish79,
+* The goal of the game is to challenge the user to have to guess the hidden words before he runs out of life.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+* Here is the live version of my project.
 
-## Reminders
+ ![Hangman](python.png)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+ ## How to play
+* First enter your name(you will be greeted my hangman)
+* You will have six attempts to guess the word
+* You will be asked to guess a letter
+* This generates as many blanks as letters in the word
+* If guessed letter in word,it will replace the blank with the letter
+* If the guessed letter not in word you loose a life
+* If you guessed all the correct words you win.
+* If you guess wrong all 6 letters you loose and the guessed word is showed in the command pannel.
 
-## Creating the Heroku app
+## Testing
+I have tested in my local terminal and the Heroku terminal
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## Credits
+* README Code institute
+* Priyam youtube
 
-1. `heroku/python`
-2. `heroku/nodejs`
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Deployment
+This project was deployed using codeinstitue mock terminal for Heroku.
+### Steps for deployment
+* Fork or clone this repository
+* Create a new Heroku app
+* Set the buildbacks to pythn and node.js
+* link the Heroku app to this repository
+* click on deploy 
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
 
-Connect your GitHub repository and deploy as normal.
 
-## Constraints
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
------
-Happy coding!
