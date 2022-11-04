@@ -74,7 +74,7 @@ a = set("abcdefghijklmnopqrstuvwxyz")
 lives = 6
 guessed = " "
 end_of_game = False
-words = random.choice(hangman_letters.word_list)
+word = random.choice(hangman_letters.word_list)
 
 print(logo)
 
@@ -88,3 +88,35 @@ for i in word:
 
 while not end_of_game:
     guess = input("Guess a letter:\n").lower()
+
+# making sure player chooses a letter not already guesssed
+    
+    if len(guess) > 1:
+        print("Please pick a single letter.")
+        
+    elif guess not in a:
+        print("Please make sure enter a letter.")
+        
+    elif guess in guessed:
+        print(f'You already guessed the letter {guess}, please try again.')
+
+
+    guessed += guess
+    # main  loop 
+    # checks to see if guess is in the word
+    if guess in word:
+        int = 0
+        for i in word:
+            if i == guess:
+                blank[int] = guess
+                int += 1
+            else:
+                int += 1
+        print(blank)
+        print(hangman[lives])
+    else:
+        print(f"Sorry, {guess} is not in the word. Try again!")
+        print(blank)
+        lives -= 1
+        print(hangman[lives])
+        
