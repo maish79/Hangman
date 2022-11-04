@@ -120,3 +120,13 @@ while not end_of_game:
         lives -= 1
         print(hangman[lives])
         
+     # checking to see if the player guessed the  word
+    if "_" not in blank:
+        print("Congratulations, you win!")
+        end_of_game = True
+    
+    # checking to see if the user lost. 
+    if lives == 0:
+        print("You lose!")
+        print("The word was " + word)
+        end_of_game = True
